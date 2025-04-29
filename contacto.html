@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb Quinta La Gema</title>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#294908',
+                        'brand-light': '#f9f9f9',
+                        'brand-dark': '#1c2a1c',
+                        'brand-light-gray': '#F0F0F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-brand-light text-gray-800 flex flex-col min-h-screen antialiased">
+
+    <!-- HEADER -->
+    <header class="bg-brand-green text-white sticky top-0 z-50 shadow">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Airbnb Quinta La Gema</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:underline">Inicio</a></li>
+                    <li><a href="galeria.html" class="hover:underline">Galería</a></li>
+                    <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-24 px-6 flex-grow">
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="bg-brand-light-gray p-12 rounded-lg">
+            <div class="bg-white p-8 shadow-lg rounded-lg">
+                <div class="flex justify-center mb-6">
+                    <img src="img/Logo_quinta.jpeg" alt="Logo Quinta La GEMA" class="w-48 h-auto mx-auto">
+                </div>
+                <h2 class="text-2xl font-semibold text-brand-green mb-4">Contacto</h2>
+                <p class="mb-6 text-gray-700">
+                    Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos, estamos para
+                    ayudarte.
+                </p>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="contactName" class="block text-sm font-medium text-gray-700">Nombre
+                            completo:</label>
+                        <input type="text" id="contactName" name="contactName" required
+                            pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo se permiten letras y espacios."
+                            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green" />
+                    </div>
+                    <div>
+                        <label for="contactEmail" class="block text-sm font-medium text-gray-700">Correo
+                            Electrónico:</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required
+                            title="Por favor escribe tu correo electrónico."
+                            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green" />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Mensaje:</label>
+                        <textarea id="message" name="message" rows="4" required
+                            title="Por favor escribe tu mensaje de contacto."
+                            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="bg-brand-green text-white py-2 px-4 rounded-md hover:bg-brand-dark transition">
+                        Enviar Mensaje
+                    </button>
+                </form>
+                <div id="contactResponseMessage" class="mt-4 text-sm text-green-600"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white text-center py-6">
+        <p>© 2025 Quinta La GEMA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+
+</body>
+
+</html>
