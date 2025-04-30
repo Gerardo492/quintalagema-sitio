@@ -8,23 +8,24 @@
 
     <meta name="description"
         content="Explora la galería de Quinta La Gema en Guanacaste: fotos de la sala, cocina, dormitorios, piscina y mirador de tu próximo hospedaje." />
-  <meta name="keywords"
+    <meta name="keywords"
         content="galería Quinta La Gema, fotos hospedaje Guanacaste, fotos casa vacacional Costa Rica, imágenes piscina Guanacaste, hospedaje, hospedaje Costa Rica" />
 
-  <link rel="canonical" href="https://quintalagema.com/galeria.html" />
+    <link rel="canonical" href="https://quintalagema.com/galeria.html" />
 
-  <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Galería Casa Vacacional Guanacaste | Quinta La Gema" />
-  <meta property="og:description" content="Redescubre cada rincón de nuestra quinta familiar con nuestra galería de imágenes." />
-  <meta property="og:url"         content="https://quintalagema.com/galeria.html" />
-  <meta property="og:image"       content="https://quintalagema.com/img/Mirador_noche.jpeg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Galería Casa Vacacional Guanacaste | Quinta La Gema" />
+    <meta property="og:description"
+        content="Redescubre cada rincón de nuestra quinta familiar con nuestra galería de imágenes." />
+    <meta property="og:url" content="https://quintalagema.com/galeria.html" />
+    <meta property="og:image" content="https://quintalagema.com/img/Mirador_noche.jpeg" />
 
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Galería Casa Vacacional Guanacaste | Quinta La Gema" />
-  <meta name="twitter:description" content="Vea imágenes de la sala, cocina, piscina y mirador de Quinta La Gema." />
-  <meta name="twitter:image"       content="https://quintalagema.com/img/Mirador_noche.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Galería Casa Vacacional Guanacaste | Quinta La Gema" />
+    <meta name="twitter:description" content="Vea imágenes de la sala, cocina, piscina y mirador de Quinta La Gema." />
+    <meta name="twitter:image" content="https://quintalagema.com/img/Mirador_noche.jpeg" />
 
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
@@ -87,11 +88,12 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold">Airbnb Quinta La Gema</h1>
             <nav>
-                <ul class="flex space-x-6">
+                <ul class="hidden md:flex space-x-8">
                     <li><a href="index.html" class="hover:underline">Inicio</a></li>
                     <li><a href="galeria.html" class="hover:underline">Galería</a></li>
                     <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
                 </ul>
+                <!-- botón móvil omitido para brevedad -->
             </nav>
         </div>
     </header>
@@ -139,7 +141,7 @@
 
     <main class="container mx-auto px-6 py-16 space-y-16">
 
-        
+
         <div class="grid gap-16 md:grid-cols-2">
             <!-- SALA -->
             <section id="sala" x-data="carousel({
@@ -267,7 +269,7 @@
             </section>
         </div>
 
-        
+
         <div class="grid gap-16 md:grid-cols-2">
             <!-- CUARTO PRINCIPAL -->
             <section id="cuarto-principal" x-data="carousel({
@@ -510,17 +512,17 @@
         }
 
         function openLightbox(img) {
-        const lb = document.getElementById("lightbox");
-        const lbImg = document.getElementById("lightbox-img");
-        lbImg.src = img.src;
-        lb.classList.add("active");
-    }
-    function closeLightbox() {
-        document.getElementById("lightbox").classList.remove("active");
-    }
-    document.addEventListener("keydown", e => {
-        if (e.key === "Escape") closeLightbox();
-    });
+            const lb = document.getElementById("lightbox");
+            const lbImg = document.getElementById("lightbox-img");
+            lbImg.src = img.src;
+            lb.classList.add("active");
+        }
+        function closeLightbox() {
+            document.getElementById("lightbox").classList.remove("active");
+        }
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape") closeLightbox();
+        });
     </script>
 
     <!-- FOOTER -->
@@ -528,22 +530,15 @@
         <div class="container mx-auto px-6">
             <p>© 2025 Quinta La GEMA. Todos los derechos reservados.</p>
             <div class="text-center">
-                <a
-                  href="https://www.instagram.com/quinta.la.gema/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram Quinta La Gema"
-                  class="inline-block"
-                >
-                  <svg
-                    class="w-6 h-6 fill-current text-gray-700 text-pink-600 transition-colors"
-                    viewBox="0 0 448 512"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.8 224.1 370.8 339 319.5 339 255.9 287.7 141 224.1 141zm0 186.6c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7 71.7 32.1 71.7 71.7-32.1 71.7-71.7 71.7zm146.4-194.3c0 14.9-12.1 27-27 27-14.9 0-27-12.1-27-27s12.1-27 27-27 27 12.1 27 27zm76.1 27.2c-.1-54.6-4.9-99.7-28-123s-68.4-27.9-123-28c-48.5-.1-194-0.1-242.5 0C52.5 29.3 7.4 34.1-16 57.3S-43.9 125.7-44 180.3c-.1 48.5 0 194 0 242.5.1 54.6 4.9 99.7 28 123s68.4 27.9 123 28c48.5.1 194 .1 242.5 0 54.6-.1 99.7-4.9 123-28s27.9-68.4 28-123c.1-48.5.1-194 0-242.5zM398.8 388c-7.8 19.5-23 34.7-42.5 42.5-29.4 11.7-99.2 9-132.3 9s-102.9 2.6-132.3-9c-19.5-7.8-34.7-23-42.5-42.5-11.7-29.4-9-99.2-9-132.3s-2.6-102.9 9-132.3c7.8-19.5 23-34.7 42.5-42.5 29.4-11.7 99.2-9 132.3-9s102.9-2.6 132.3 9c19.5 7.8 34.7 23 42.5 42.5 11.7 29.4 9 99.2 9 132.3s2.7 102.9-9 132.3z"/>
-                  </svg>
+                <a href="https://www.instagram.com/quinta.la.gema/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram Quinta La Gema" class="inline-block">
+                    <svg class="w-6 h-6 fill-current text-gray-700 text-pink-600 transition-colors"
+                        viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.8 224.1 370.8 339 319.5 339 255.9 287.7 141 224.1 141zm0 186.6c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7 71.7 32.1 71.7 71.7-32.1 71.7-71.7 71.7zm146.4-194.3c0 14.9-12.1 27-27 27-14.9 0-27-12.1-27-27s12.1-27 27-27 27 12.1 27 27zm76.1 27.2c-.1-54.6-4.9-99.7-28-123s-68.4-27.9-123-28c-48.5-.1-194-0.1-242.5 0C52.5 29.3 7.4 34.1-16 57.3S-43.9 125.7-44 180.3c-.1 48.5 0 194 0 242.5.1 54.6 4.9 99.7 28 123s68.4 27.9 123 28c48.5.1 194 .1 242.5 0 54.6-.1 99.7-4.9 123-28s27.9-68.4 28-123c.1-48.5.1-194 0-242.5zM398.8 388c-7.8 19.5-23 34.7-42.5 42.5-29.4 11.7-99.2 9-132.3 9s-102.9 2.6-132.3-9c-19.5-7.8-34.7-23-42.5-42.5-11.7-29.4-9-99.2-9-132.3s-2.6-102.9 9-132.3c7.8-19.5 23-34.7 42.5-42.5 29.4-11.7 99.2-9 132.3-9s102.9-2.6 132.3 9c19.5 7.8 34.7 23 42.5 42.5 11.7 29.4 9 99.2 9 132.3s2.7 102.9-9 132.3z" />
+                    </svg>
                 </a>
-              </div>
+            </div>
         </div>
     </footer>
 </body>
