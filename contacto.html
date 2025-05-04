@@ -56,19 +56,45 @@
 <body class="bg-brand-light text-gray-800 flex flex-col min-h-screen antialiased">
 
     <!-- HEADER -->
-    <header class="bg-brand-green text-white sticky top-0 z-50 shadow">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Airbnb Quinta La Gema</h1>
-            <nav>
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="index.html" class="hover:underline">Inicio</a></li>
-                    <li><a href="galeria.html" class="hover:underline">Galería</a></li>
-                    <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-                </ul>
-                <!-- botón móvil omitido para brevedad -->
-            </nav>
-        </div>
-    </header>
+    <!-- HEADER -->
+  <header x-data="{ open: false }" class="bg-brand-green text-white sticky top-0 z-50 shadow">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Airbnb Quinta La Gema</h1>
+      <nav class="relative">
+        <!-- Botón hamburguesa normal -->
+        <button @click="open = !open" class="block md:hidden focus:outline-none p-2" aria-label="Toggle menu">
+          <!-- Icono hamburguesa -->
+          <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Icono cerrar -->
+          <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Menú escritorio -->
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="index.html" class="hover:underline">Inicio</a></li>
+          <li><a href="galeria.html" class="hover:underline">Galería</a></li>
+          <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+        </ul>
+
+        <!-- Menú móvil full-screen -->
+        <ul x-cloak x-show="open" @click.away="open = false"
+          x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-x-full"
+          x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-300 transform"
+          x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full"
+          class="fixed inset-0 bg-brand-green z-40 md:hidden flex flex-col items-center justify-center space-y-6">
+          <li><a href="index.html" class="text-2xl font-semibold">Inicio</a></li>
+          <li><a href="galeria.html" class="text-2xl font-semibold">Galería</a></li>
+          <li><a href="contacto.html" class="text-2xl font-semibold">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
     <main class="container mx-auto py-24 px-6 flex-grow">
 
