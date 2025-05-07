@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icono favicon logo quinta -->
+    <link rel="icon" href="img/logo_gema_favicon.ico" type="image/x-icon" />
+
     <title>Airbnb Quinta La Gema</title>
 
     <meta name="description"
@@ -20,20 +24,23 @@
     <meta property="og:url" content="https://quintalagema.com/contacto.html" />
     <meta property="og:image" content="https://quintalagema.com/img/Logo_quinta.jpeg" />
 
+    <!-- Twitter  -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Reserva Casa Guanacaste | Contacto Quinta La Gema" />
     <meta name="twitter:description"
         content="Formulario de contacto para reservar tu próximo hospedaje en Guanacaste." />
     <meta name="twitter:image" content="https://quintalagema.com/img/Logo_quinta.jpeg" />
 
+    <!-- Datos estructurados -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "url": "https://quintalagema.com/contacto.html"
-  }
-  </script>
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "url": "https://quintalagema.com/contacto.html"
+    }
+    </script>
 
+    <!-- Tailwind y Alpine -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -55,7 +62,6 @@
 
 <body class="bg-brand-light text-gray-800 flex flex-col min-h-screen antialiased">
 
-    <!-- HEADER -->
     <!-- HEADER -->
   <header x-data="{ open: false }" class="bg-brand-green text-white sticky top-0 z-50 shadow">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">

@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icono favicon logo quinta -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
     <title>Airbnb Quinta La Gema</title>
 
     <meta name="description"
@@ -20,21 +24,23 @@
     <meta property="og:url" content="https://quintalagema.com/galeria.html" />
     <meta property="og:image" content="https://quintalagema.com/img/Mirador_noche.jpeg" />
 
+    <!-- Twitter  -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Galería Casa Vacacional Guanacaste | Quinta La Gema" />
     <meta name="twitter:description" content="Vea imágenes de la sala, cocina, piscina y mirador de Quinta La Gema." />
     <meta name="twitter:image" content="https://quintalagema.com/img/Mirador_noche.jpeg" />
 
+    <!-- Datos estructurados -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    "name": "Galería Quinta La Gema",
-    "url": "https://quintalagema.com/galeria.html"
-  }
-  </script>
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Galería Quinta La Gema",
+      "url": "https://quintalagema.com/galeria.html"
+    }
+    </script>
 
-    <!-- Tailwind CDN + configuración de colores -->
+    <!-- Tailwind CDN + colores -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -51,6 +57,7 @@
         }
     </script>
 
+    <!-- Estilos para lightbox -->
     <style>
         .lightbox {
             position: fixed;
@@ -76,7 +83,6 @@
             border-radius: .5rem;
         }
     </style>
-
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
